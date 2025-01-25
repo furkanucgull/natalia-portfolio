@@ -15,7 +15,7 @@ const HeroName = () => {
                         delay: index * 0.15,
                         duration: 0.15,
                     }}
-                    className="inline-block !font-pinyon text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight text-heroname  hover:scale-115 
+                    className="inline-block !font-pinyon text-5xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-8xl tracking-tight text-heroname  hover:scale-115 
                    "
                 >
                     {char === " " ? "\u00A0" : char}
