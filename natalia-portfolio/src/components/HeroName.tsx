@@ -5,17 +5,18 @@ const HeroName = () => {
     const letters = text.split("");
 
     return (
-        <div className="text-white flex items-center justify-center pt-20">
+        <div className="text-white flex items-center justify-center pt-20 mt-12">
             {letters.map((char, index) => (
                 <motion.span
                     key={index}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{
-                        delay: index * 0.2,
-                        duration: 0.2,
+                        delay: index * 0.15,
+                        duration: 0.15,
                     }}
-                    className="inline-block font-pinyon text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight text-heroname"
+                    className="inline-block !font-pinyon text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight text-heroname  hover:scale-115 
+                   "
                 >
                     {char === " " ? "\u00A0" : char}
                 </motion.span>

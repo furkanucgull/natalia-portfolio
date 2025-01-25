@@ -1,43 +1,61 @@
-const Navbar = () => {
-    return (
-        <>
-            <nav className="z-10 w-full flex items-center justify-between text-white px-4 sm:px-6 md:px-8 lg:px-12">
-                {/* Logo (Natalia) */}
-                <span className="cursor-pointer border-b-1 border-gray-700 rounded-b-xs text-2xl sm:text-3xl md:text-4xl items-center justify-center p-2 font-satisfy bg-gradient-to-r from-orange-400 via-gray-300 to-indigo-400 flex text-transparent bg-clip-text">
-                    Natalia
-                </span>
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { FiMenu, FiX } from "react-icons/fi";
 
-                {/* Menü */}
-                <div className="flex items-center">
-                    <ul className="flex flex-col sm:flex-row gap-2 sm:gap-4">
-                        <li>
-                            <a
-                                href="#home"
-                                className="hover:text-gray-300 font-poppins hover:bg-[#161A1A] transition duration-300 ease-in-out px-6 py-2 text-center text-sm sm:text-md md:px-8 md:py-3 text-orange-300"
-                            >
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#projects"
-                                className="hover:text-gray-300 font-poppins hover:bg-[#161A1A] transition duration-300 ease-in-out px-6 py-2 text-center text-sm sm:text-md md:px-8 md:py-3 text-orange-300"
-                            >
-                                My Art Gallery
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#contact"
-                                className="hover:text-gray-300 font-poppins hover:bg-[#161A1A] transition duration-300 ease-in-out px-6 py-2 text-center text-sm sm:text-md md:px-8 md:py-3 text-orange-300"
-                            >
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </>
+const Navbar = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
+    return (
+        <nav className="z-10 w-full flex items-center justify-between bg-black text-white px-4 py-4 xl:py-8 sm:px-6 md:px-8 lg:px-12">
+            {/* Logo (Natalia) */}
+            <span className="cursor-pointer text-2xl sm:text-3xl md:text-4xl font-satisfy bg-gradient-to-r from-orange-400 via-gray-300 to-indigo-400 text-transparent bg-clip-text">
+                Natalia
+            </span>
+
+            {/* Hamburger Menu Icon (Only for Mobile) */}
+            <div className="sm:hidden text-2xl cursor-pointer" onClick={toggleMenu}>
+                {menuOpen ? <FiX /> : <FiMenu />}
+            </div>
+
+            {/* Menü */}
+            <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={menuOpen ? { opacity: 1, height: "auto" } : { opacity: 1, height: 0 }}
+                transition={{ duration: 0.25, ease: "easeInOut" }} // Süreyi kısaltmak ve yumuşatmak
+                className={`sm:flex ${menuOpen ? "flex" : "hidden"} flex-col sm:flex-row items-center gap-2 sm:gap-4 absolute sm:static top-16 right-0 sm:right-auto w-fit sm:w-auto bg-gray-900 sm:bg-transparent sm:z-auto z-20 p-4 sm:p-0 shadow-lg sm:shadow-none`}
+            >
+                <ul className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full sm:w-auto text-right">
+                    <li>
+                        <a
+                            href="#home"
+                            className="hover:text-gray-300 font-poppins hover:bg-[#161A1A] transition duration-300 ease-in-out px-6 py-2 text-right text-sm sm:text-md md:px-8 md:py-3 text-orange-500"
+                        >
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#projects"
+                            className="hover:text-gray-300 font-poppins hover:bg-[#161A1A] transition duration-300 ease-in-out px-6 py-2 text-right text-sm sm:text-md md:px-8 md:py-3 text-orange-500"
+                        >
+                            My Art Gallery
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#contact"
+                            className="hover:text-gray-300 font-poppins hover:bg-[#161A1A] transition duration-300 ease-in-out px-6 py-2 text-right text-sm sm:text-md md:px-8 md:py-3 text-orange-500"
+                        >
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </motion.div>
+        </nav>
     );
 };
 

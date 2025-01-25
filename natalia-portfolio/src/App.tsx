@@ -1,20 +1,29 @@
 import './App.css';
 import HeroName from './components/HeroName';
+import HeroPic from './components/HeroPic';
 import Navbar from './components/Navbar';
 
 function App() {
   return (
     <>
-      <main className="flex flex-col items-center pb-5 bg-black">
+      {/* Header ve Navbar */}
+      <header className="flex flex-col items-center ">
         <Navbar />
-      </main>
-      <div
-        className="relative -z-10 bg-no-repeat lg:bg-[center_top_-30rem] bg-cover min-h-screen"
-        style={{
-          backgroundImage: "url('src/images/background.jpg')",
-        }}
-      >
-        <HeroName />
+      </header>
+
+      {/* Arka plan gradient */}
+      <div className="relative min-h-screen w-full bg-gradient-to-r from-neutral-300 to-gray-500 overflow-hidden">
+        {/* HeroName */}
+        <section className="relative z-20">
+          <HeroName />
+        </section>
+
+        {/* HeroPic */}
+        <section className="relative z-20 mt-10">
+          <HeroPic />
+        </section>
+
+
       </div>
     </>
   );
