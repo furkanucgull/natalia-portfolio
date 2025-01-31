@@ -34,6 +34,9 @@ const Home = () => {
                 >
                 </motion.div>
             </div>
+            <div className="text-xl text-center  sm:text-2xl font-bold text-gray-800 font-poppins ">
+                Some of my Projects
+            </div>
             <div className="karosel flex justify-center">
                 <Slider />
 
