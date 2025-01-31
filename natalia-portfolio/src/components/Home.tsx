@@ -1,47 +1,42 @@
-import AboutMe from "./AboutMe";
-import { motion } from "framer-motion";
-import HeroName from "./HeroName";
-import HeroPic from "./HeroPic";
+import { useRef } from "react";
+import AboutSection from "./AboutSection";
+import { useScroll, useTransform, motion } from "framer-motion";
 import Navbar from "./Navbar";
 import Slider from "./Slider";
 
 const Home = () => {
+
+    const container = useRef<HTMLDivElement>(null);
+    const aboutRef = useRef<HTMLDivElement>(null);
+
+
+    const { scrollYProgress } = useScroll({
+        target: container,
+        offset: ["start start", "end end"],
+    });
+
+
+    const showSlider = useTransform(scrollYProgress, [0.6, 0.9], [0, 1]);
+
     return (
         <>
             <header>
                 <Navbar />
             </header>
-            <div className=" ">
-                <div className="name-section ">
-                    <HeroName />
+            <main ref={container} className="relative h-[200vh]">
+                {/* About Section */}
 
-                    <div className=" grid  sm:grid-cols-12    w-full">
-                        <div className="hero-pic md:col-span-5 p-10 ">
-                            <HeroPic />
-                        </div>
-                        <div className="md:col-span-7 p-10 ">
-                            <AboutMe />
-                        </div>
-
-                    </div>
+                <div ref={aboutRef}>
+                    <AboutSection scrollYProgress={scrollYProgress} />
                 </div>
-                <motion.div
-                    className="slider mt-12 "
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true, amount: 0.5 }}
-                >
+                <div className="h-16 m-4">
+
+                </div>
+
+                <motion.div style={{ opacity: showSlider }}>
+                    <Slider scrollYProgress={scrollYProgress} />
                 </motion.div>
-            </div>
-            <div className="text-xl text-center  sm:text-2xl font-bold text-gray-800 font-poppins ">
-                Some of my Projects
-            </div>
-            <div className="karosel flex justify-center">
-                <Slider />
-
-            </div>
-
+            </main>
         </>
     );
 };

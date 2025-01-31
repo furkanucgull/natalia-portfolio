@@ -1,5 +1,5 @@
 import 'flowbite';
-import { motion } from "framer-motion";
+import { useTransform, motion } from "framer-motion";
 import photo1 from '../images/photo1.jpg';
 import photo2 from '../images/photo2.jpg';
 import photo3 from '../images/photo3.jpg';
@@ -9,7 +9,10 @@ import photo6 from '../images/photo6.jpg';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-const Slider = () => {
+const Slider = ({ scrollYProgress }: any) => {
+
+    const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+    const rotate = useTransform(scrollYProgress, [0, 1], [0, 0]);
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
@@ -30,7 +33,7 @@ const Slider = () => {
     };
 
     return (
-        <motion.div
+        <motion.div style={{ scale, rotate }}
             initial={{ y: 800, opacity: 0 }}
             animate={{ y: 0, opacity: 1, scale: 1 }}
             transition={{
@@ -38,8 +41,11 @@ const Slider = () => {
                 duration: 1,
                 type: "spring"
             }}
-            className="relative w-full max-w-screen-lg mx-auto mt-10 p-6 lg:mt-20 "
+            className="h-screen relative w-full  mx-auto mt-80 p-6 lg:mt-20 bg-gradient-to-r from-neutral-300 to-gray-600"
         >
+            <h1
+                className="text-xl text-center  sm:text-2xl font-bold text-gray-800 font-poppins mb-10"
+            >Some Of My Projects</h1>
             <Carousel
                 showDots={true}
                 responsive={responsive}

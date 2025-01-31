@@ -7,3 +7,20 @@
   --font-pinyon: Pinyon Script, sans-serif;
   --color-heroname: #0c0808;
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #959499;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #df1008;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
