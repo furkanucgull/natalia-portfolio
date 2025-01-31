@@ -53,7 +53,7 @@ const Slider = ({ scrollYProgress }: any) => {
                     itemClass="carousel-item-padding-40-px mx-2"
                 >
                     {images.map((img, index) => (
-                        <div key={index} className="w-full">
+                        <div key={index} className="w-full mb-14">
                             <img
                                 src={img}
                                 alt={`Photo ${index + 1}`}
