@@ -28,9 +28,7 @@ const Home = () => {
                 <div ref={aboutRef}>
                     <AboutSection scrollYProgress={scrollYProgress} />
                 </div>
-                <div className="h-16 m-4">
 
-                </div>
 
                 <motion.div style={{ opacity: showSlider }}>
                     <Slider scrollYProgress={scrollYProgress} />
