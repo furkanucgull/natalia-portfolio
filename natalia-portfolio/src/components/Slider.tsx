@@ -71,16 +71,16 @@ const Slider = ({ scrollYProgress }: any) => {
                     <img src={photo2} alt="Photo 2" className="w-full h-96 object-cover rounded-4xl lg:shadow-lg " />
                 </div>
                 <div className="w-full">
-                    <img src={photo3} alt="Photo 3" className="w-full h-96 object-cover rounded-4xl lg:shadow-lg " />
+                    <img src={photo3} alt="Photo 3" className="w-full h-96 object-cover   rounded-4xl lg:shadow-lg " />
                 </div>
                 <div className="w-full">
-                    <img src={photo4} alt="Photo 3" className="w-full h-96 object-cover rounded-4xl lg:shadow-lg " />
+                    <img src={photo4} alt="Photo 3" className="w-full h-96 object-cover  object-top rounded-4xl lg:shadow-lg " />
                 </div>
                 <div className="w-full">
                     <img src={photo5} alt="Photo 3" className="w-full h-96 object-cover rounded-4xl lg:shadow-lg " />
                 </div>
                 <div className="w-full">
-                    <img src={photo6} alt="Photo 3" className="w-full h-96 object-cover rounded-4xl lg:shadow-lg " />
+                    <img src={photo6} alt="Photo 3" className="w-full h-96 object-cover object-center rounded-4xl lg:shadow-lg " />
                 </div>
 
 
