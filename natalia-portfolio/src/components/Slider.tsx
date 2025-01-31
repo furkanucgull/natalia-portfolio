@@ -65,7 +65,7 @@ const Slider = ({ scrollYProgress }: any) => {
 
 
                 <div className="w-full ">
-                    <img src={photo1} alt="Photo 1" className="w-full h-96 object-cover rounded-4xl lg:shadow-lg  " />
+                    <img src={photo1} alt="Photo 1" className="w-full h-96 object-cover object-top rounded-4xl lg:shadow-lg  " />
                 </div>
                 <div className="w-full">
                     <img src={photo2} alt="Photo 2" className="w-full h-96 object-cover rounded-4xl lg:shadow-lg " />

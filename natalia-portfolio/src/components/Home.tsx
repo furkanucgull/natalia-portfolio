@@ -9,7 +9,6 @@ const Home = () => {
     const container = useRef<HTMLDivElement>(null);
     const aboutRef = useRef<HTMLDivElement>(null);
 
-
     const { scrollYProgress } = useScroll({
         target: container,
         offset: ["start start", "end end"],
