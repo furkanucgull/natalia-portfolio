@@ -34,9 +34,9 @@ const Home = () => {
                 >
                 </motion.div>
             </div>
-            <div className="flex justify-center">
-
+            <div className="karosel flex justify-center">
                 <Slider />
+
             </div>
 
         </>

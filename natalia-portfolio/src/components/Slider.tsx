@@ -3,67 +3,83 @@ import { motion } from "framer-motion";
 import photo1 from '../images/photo1.jpg';
 import photo2 from '../images/photo2.jpg';
 import photo3 from '../images/photo3.jpg';
-
+import photo4 from '../images/photo4.jpg';
+import photo5 from '../images/photo5.jpg';
+import photo6 from '../images/photo6.jpg';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 const Slider = () => {
+    const responsive = {
+        superLargeDesktop: {
+            breakpoint: { max: 4000, min: 3000 },
+            items: 3
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 3
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+    };
+
     return (
-        <div>
-
-            <motion.div
-                initial={{ x: 800, opacity: 0 }}
-                animate={{ x: 0, opacity: 1, scale: 1 }}
-                transition={{
-                    delay: 2,
-                    duration: 2,
-                    type: "spring"
-                }}
-                id="default-carousel" className="relative w-64 h-auto p-6 mt-10 md:w-[400px] lg:mt-20 " data-carousel="slide">
-
-                <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-
-                    <div className=" duration-700 ease-in-out" data-carousel-item>
-                        <img src={photo1} className="absolute block w-full  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-                    </div>
-
-                    <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src={photo3} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-                    </div>
-
-                    <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src={photo2} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-                    </div>
-
-                    <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src={photo1} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-                    </div>
+        <motion.div
+            initial={{ y: 800, opacity: 0 }}
+            animate={{ y: 0, opacity: 1, scale: 1 }}
+            transition={{
+                delay: 1,
+                duration: 1,
+                type: "spring"
+            }}
+            className="relative w-full max-w-screen-lg mx-auto mt-10 p-6 lg:mt-20 "
+        >
+            <Carousel
+                showDots={true}
+                responsive={responsive}
+                ssr={true}
+                infinite={true}
+                autoPlay={true}
+                autoPlaySpeed={1300}
+                keyBoardControl={true}
+                customTransition="transform 600ms ease-in-out"
+                transitionDuration={500}
+                containerClass="carousel-container"
+                removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+                dotListClass="custom-dot-list-style"
+                itemClass="carousel-item-padding-40-px mx-2"
+                className=''
+            >
 
 
+                <div className="w-full ">
+                    <img src={photo1} alt="Photo 1" className="w-full h-96 object-cover rounded-4xl lg:shadow-lg  " />
+                </div>
+                <div className="w-full">
+                    <img src={photo2} alt="Photo 2" className="w-full h-96 object-cover rounded-4xl lg:shadow-lg " />
+                </div>
+                <div className="w-full">
+                    <img src={photo3} alt="Photo 3" className="w-full h-96 object-cover rounded-4xl lg:shadow-lg " />
+                </div>
+                <div className="w-full">
+                    <img src={photo4} alt="Photo 3" className="w-full h-96 object-cover rounded-4xl lg:shadow-lg " />
+                </div>
+                <div className="w-full">
+                    <img src={photo5} alt="Photo 3" className="w-full h-96 object-cover rounded-4xl lg:shadow-lg " />
+                </div>
+                <div className="w-full">
+                    <img src={photo6} alt="Photo 3" className="w-full h-96 object-cover rounded-4xl lg:shadow-lg " />
                 </div>
 
-                <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-                    <button type="button" className="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                    <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                    <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-                </div>
 
-                <button type="button" className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                    <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
-                        </svg>
-                        <span className="sr-only">Previous</span>
-                    </span>
-                </button>
-                <button type="button" className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                    <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
-                        </svg>
-                        <span className="sr-only">Next</span>
-                    </span>
-                </button>
-            </motion.div>
-        </div>
+            </Carousel>
+        </motion.div>
     );
 };
 
