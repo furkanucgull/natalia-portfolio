@@ -31,8 +31,8 @@ const Home = () => {
                 <motion.div style={{ opacity: showSlider }}>
                     <Slider scrollYProgress={scrollYProgress} />
                 </motion.div>
+                <Socials />
                 <div >
-                    <Socials />
                 </div>
             </main>
 

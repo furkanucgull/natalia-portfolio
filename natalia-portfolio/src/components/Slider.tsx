@@ -32,7 +32,7 @@ const Slider = ({ scrollYProgress }: any) => {
                 initial={{ y: 800, opacity: 0 }}
                 animate={{ y: 0, opacity: 1, scale: 1 }}
                 transition={{ delay: 1, duration: 1, type: "spring" }}
-                className="h-screen relative w-full mx-auto mt-80 p-6 lg:mt-20 bg-gradient-to-r from-neutral-300 to-gray-600"
+                className="h-screen relative w-full mx-auto mt-80 p-6 lg:mt-20 "
             >
                 <h1 className="text-xl text-center sm:text-2xl font-bold text-gray-800 font-poppins mb-10">
                     Some Of My Projects
