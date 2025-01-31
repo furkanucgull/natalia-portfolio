@@ -5,7 +5,7 @@ const HeroName = () => {
     const letters = text.split("");
 
     return (
-        <div className="text-white flex items-center justify-center pt-20 mt-12">
+        <div className="text-white flex items-center justify-center pt-20 my-10">
             {letters.map((char, index) => (
                 <motion.span
                     key={index}

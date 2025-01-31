@@ -25,7 +25,7 @@ const Navbar = () => {
             <motion.div
                 initial={{ opacity: 0, height: 0 }}
                 animate={menuOpen ? { opacity: 1, height: "auto" } : { opacity: 1, height: 0 }}
-                transition={{ duration: 0.25, ease: "easeInOut" }} // Süreyi kısaltmak ve yumuşatmak
+                transition={{ duration: 0.1, ease: "easeInOut" }} // Süreyi kısaltmak ve yumuşatmak
                 className={`sm:flex ${menuOpen ? "flex" : "hidden"} flex-col sm:flex-row items-center gap-2 sm:gap-4 absolute sm:static top-16 right-0 sm:right-auto w-fit sm:w-auto bg-gray-900 sm:bg-transparent sm:z-auto z-20 p-4 sm:p-0 shadow-lg sm:shadow-none`}
             >
                 <ul className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full sm:w-auto text-right">

@@ -2,21 +2,22 @@ import { motion } from "framer-motion";
 
 const AboutMe = () => {
     return (
-        <section className="p-6 sm:p-8 lg:p-12  shadow-lg rounded-2xl max-w-3xl mx-auto">
+        <motion.section
+            initial={{ x: -200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+                delay: 0.5,
+                duration: 0.4,
+                ease: "easeOut",
+            }}
+            className="p-6 sm:p-8 lg:p-12  shadow-lg rounded-2xl max-w-3xl mx-auto">
 
-            <motion.h1
-                initial={{ x: -200, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{
-                    delay: 0.5,
-                    duration: 0.4,
-                    ease: "easeOut",
-                }}
-                className="text-2xl text-center border-b border-gray-500   sm:text-3xl font-bold text-gray-800 font-poppins mb-8"
+            <h1
+
+                className="text-2xl text-center  sm:text-2xl font-bold text-gray-800 font-poppins mb-8"
             >
                 About Me
-            </motion.h1>
-
+            </h1>
 
             <motion.p
                 initial={{ y: 50, opacity: 0 }}
@@ -26,13 +27,11 @@ const AboutMe = () => {
                     duration: 0.4,
                     ease: "easeOut",
                 }}
-                className="text-gray-700 font-poppins text-sm sm:text-base leading-6"
+                className="text-gray-700 font-poppins text-xs sm:text-base sm:text-wrap leading-6 w-fit text-center lg:h-96"
             >
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quos, alias quidem nobis fuga quo.
-                Reprehenderit dolores consectetur consequuntur debitis, beatae commodi sed, obcaecati cum vitae tempora
-                alias cumque hic.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates magnam dolor voluptas minima quos a praesentium cupiditate! Doloremque exercitationem suscipit officia culpa alias eius voluptatibus tempora commodi? Magni nemo ut voluptates fugiat, in minima asperiores accusamus a consequatur sapiente neque exercitationem laboriosam quod. Ab quaerat eius fugit quos quae facilis quidem totam cumque, porro illo exercitationem. Sunt, accusamus! Quia, amet.
             </motion.p>
-        </section>
+        </motion.section>
     );
 };
 

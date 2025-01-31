@@ -1,4 +1,6 @@
 @import 'tailwindcss';
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
 @theme {
   --font-poppins: Poppins, sans-serif;
   --font-satisfy: Satisfy, sans-serif;
