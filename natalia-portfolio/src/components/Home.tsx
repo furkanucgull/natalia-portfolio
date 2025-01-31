@@ -3,6 +3,7 @@ import AboutSection from "./AboutSection";
 import { useScroll, useTransform, motion } from "framer-motion";
 import Navbar from "./Navbar";
 import Slider from "./Slider";
+import Socials from "./Socials";
 
 const Home = () => {
 
@@ -22,18 +23,19 @@ const Home = () => {
             <header>
                 <Navbar />
             </header>
-            <main ref={container} className="relative h-[200vh]">
-                {/* About Section */}
-
+            <main ref={container} className="relative h-[200vh] ">
                 <div ref={aboutRef}>
                     <AboutSection scrollYProgress={scrollYProgress} />
                 </div>
 
-
                 <motion.div style={{ opacity: showSlider }}>
                     <Slider scrollYProgress={scrollYProgress} />
                 </motion.div>
+                <div >
+                    <Socials />
+                </div>
             </main>
+
         </>
     );
 };

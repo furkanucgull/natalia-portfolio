@@ -10,7 +10,7 @@ const AboutSection = ({ scrollYProgress }: any) => {
     const translateY = useTransform(scrollYProgress, [0, 0.3, 0.7], [0, 0, -100]);
 
     return (
-        <div className="h-screen sticky top-0">
+        <div className="h-screen sticky top-0 ">
             <div className="name-section">
                 <HeroName />
                 <div className="h-screen grid sm:grid-cols-12 w-full">
