@@ -17,7 +17,7 @@ const HeroPic = () => {
                 }}
             >
                 <img
-                    className="  rounded-4xl lg:w-fit lg:h-auto 
+                    className="  rounded-4xl lg:w-[350px] lg:h-[543px] lg:ml-10 w-96 h-88
                     motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-cyan-500 hover:shadow-lg hover:shadow-cyan-500/50
                     "
                     src={pic}

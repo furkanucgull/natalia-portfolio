@@ -6,7 +6,7 @@ import HeroPic from "./HeroPic";
 const AboutSection = ({ scrollYProgress }: any) => {
 
 
-    const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7], [1, 1, 0]);
+    const opacity = useTransform(scrollYProgress, [0, 0.8, 1], [1, 1, 0.4]);
     const translateY = useTransform(scrollYProgress, [0, 0.3, 0.7], [0, 0, -100]);
 
     return (

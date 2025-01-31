@@ -14,7 +14,7 @@ const AboutMe = () => {
 
             <h1
 
-                className="text-2xl text-center  sm:text-2xl font-bold text-gray-800 font-poppins mb-8"
+                className="text-3xl text-center  sm:text-4xl font-bold text-gray-800 font-poppins mb-8"
             >
                 About Me
             </h1>
@@ -27,7 +27,7 @@ const AboutMe = () => {
                     duration: 0.4,
                     ease: "easeOut",
                 }}
-                className="text-gray-700 font-poppins text-xs sm:text-base sm:text-wrap leading-6 w-fit text-center lg:h-96"
+                className="text-gray-700 font-poppins text-sm sm:text-base sm:text-wrap leading-6 w-fit text-center lg:h-96 lg:text-xl"
             >
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates magnam dolor voluptas minima quos a praesentium cupiditate! Doloremque exercitationem suscipit officia culpa alias eius voluptatibus tempora commodi? Magni nemo ut voluptates fugiat, in minima asperiores accusamus a consequatur sapiente neque exercitationem laboriosam quod. Ab quaerat eius fugit quos quae facilis quidem totam cumque, porro illo exercitationem. Sunt, accusamus! Quia, amet.
             </motion.p>
