@@ -2,10 +2,13 @@ import BusinessCard from "./BusinessCard";
 
 const Contact = () => {
     return (
-        <div className="">
+        <main className="h-screen relative">
+            <div >
 
-            <BusinessCard />
-        </div>
+                <BusinessCard />
+
+            </div>
+        </main>
     );
 };
 
