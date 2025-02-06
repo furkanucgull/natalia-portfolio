@@ -8,11 +8,11 @@ const HeroPic = () => {
             {/* Image */}
             <motion.div
                 className=""
-                initial={{ x: 800, opacity: 0 }}
+                initial={{ x: -200, opacity: 0 }}
                 animate={{ x: 0, opacity: 1, scale: 1 }}
                 transition={{
-                    delay: 1.25,
-                    duration: .65,
+                    delay: 0.65,
+                    duration: .5,
                     type: "spring"
                 }}
             >

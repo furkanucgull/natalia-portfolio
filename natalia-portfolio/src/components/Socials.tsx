@@ -1,28 +1,18 @@
-import { FaInstagramSquare, FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
 
 const Socials = () => {
     return (
-        <div className="h-screen ">
-            <h1 className="text-center lg:text-4xl text-xl mb-8  font-extrabold 
-    bg-gradient-to-r from-gray-500 via-blue-400 to-black text-transparent 
-    bg-clip-text drop-shadow-lg animate-pulse  ">
-                🚀 Connect with Me on Social Media! ✨
+        <div className="text-center">
+            <h1 className="text-lg font-semibold mb-4 text-gray-400 tracking-wide text-nowrap">
+                ✨ Follow Me on Social Media! ✨
             </h1>
-            <div className="flex justify-center items-center lg:gap-40 gap-8 lg:mt-14 ">
-
-                <div>
-                    <FaInstagramSquare className="lg:w-12 lg:h-auto w-10 h-auto hover:scale-105 hover:cursor-pointer lg:text-gray-600 hover:text-pink-500 text-pink-500 transition-colors duration-300" />
-                </div>
-                <div>
-                    <FaFacebook className="lg:w-12 lg:h-auto w-10 h-auto hover:scale-105 hover:cursor-pointer lg:text-gray-600 hover:text-blue-500  text-blue-500transition-colors duration-300" />
-                </div>
-                <div>
-                    <FaLinkedin className="lg:w-12 lg:h-auto w-10 h-auto hover:scale-105 hover:cursor-pointer lg:text-gray-600 hover:text-blue-600 text-blue-600 transition-colors duration-300" />
-                </div>
-                <div>
-                    <FaXTwitter className="lg:w-12 lg:h-auto w-10 h-auto hover:scale-105 hover:cursor-pointer lg:text-gray-600 hover:text-black text-black transition-colors duration-300" />
-                </div>
+            <div className="flex justify-center items-center gap-6 lg:gap-10">
+                <FaInstagram className="w-7 h-7 text-gray-400 hover:text-pink-500 transition-all duration-300 transform hover:scale-110" />
+                <FaFacebook className="w-7 h-7 text-gray-400 hover:text-blue-500 transition-all duration-300 transform hover:scale-110" />
+                <FaLinkedin className="w-7 h-7 text-gray-400 hover:text-blue-600 transition-all duration-300 transform hover:scale-110" />
+                <FaXTwitter className="w-7 h-7 text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110" />
             </div>
         </div>
     );

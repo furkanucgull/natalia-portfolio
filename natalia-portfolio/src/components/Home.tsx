@@ -3,7 +3,7 @@ import AboutSection from "./AboutSection";
 import { useScroll, useTransform, motion } from "framer-motion";
 import Navbar from "./Navbar";
 import Slider from "./Slider";
-import Socials from "./Socials";
+import Footer from "./Footer";
 
 const Home = () => {
 
@@ -14,10 +14,7 @@ const Home = () => {
         target: container,
         offset: ["start start", "end end"],
     });
-
-
     const showSlider = useTransform(scrollYProgress, [0.6, 0.9], [0, 1]);
-
     return (
         <>
             <header>
@@ -31,7 +28,7 @@ const Home = () => {
                 <motion.div style={{ opacity: showSlider }}>
                     <Slider scrollYProgress={scrollYProgress} />
                 </motion.div>
-                <Socials />
+                <Footer />
                 <div >
                 </div>
             </main>
