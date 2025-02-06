@@ -12,13 +12,13 @@
 }
 @font-face {
   font-family: RoxboroughCF-Regular;
-  src: url('/public/fonts/RoxboroughCF-Regular.otf');
+  src: url('/fonts/RoxboroughCF-Regular.otf');
   font-family: GlacialIndifference-Regular;
-  src: url('/public/fonts/GlacialIndifference-Regular.otf');
+  src: url('/fonts/GlacialIndifference-Regular.otf');
 }
 @font-face {
   font-family: RoxboroughCF-Thin;
-  src: url('/public/fonts/RoxboroughCF-Thin.otf');
+  src: url('/fonts/RoxboroughCF-Thin.otf');
 }
 ::-webkit-scrollbar {
   width: 12px;
