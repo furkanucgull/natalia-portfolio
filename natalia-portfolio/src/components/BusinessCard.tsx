@@ -2,7 +2,7 @@ const BusinessCard = () => {
     return (
         <div className=" grid grid-cols-2  sm:py-12 overflow-hidden w-full">
 
-            <div className="flex items-center justify-center border-r-4 h-62 w-38 mt-8  border-white lg:h-96 lg:mt-20">
+            <div className="flex items-center justify-center border-r-4 h-62 w-38 mt-8  border-white lg:h-96 lg:mt-20 lg:w-full">
                 <div className="lg:text-[190px]  text-[100px]  relative font-roboxthin text-white">N
                     <div className="absolute top-11 -right-4 lg:top-24 lg:-right-7 ">
                         S
