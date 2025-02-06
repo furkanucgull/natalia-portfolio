@@ -13,7 +13,9 @@ const Navbar = () => {
     return (
         <nav className="z-10 w-full flex items-center justify-between bg-black text-white px-4 py-4 xl:py-8 sm:px-6 md:px-8 lg:px-12">
             {/* Logo (Natalia) */}
-            <span className="cursor-pointer text-2xl sm:text-3xl md:text-4xl font-satisfy bg-gradient-to-r from-orange-400 via-gray-300 to-indigo-400 text-transparent bg-clip-text">
+            <span
+                onClick={() => navigate("/")}
+                className="cursor-pointer text-2xl sm:text-3xl md:text-4xl font-satisfy bg-gradient-to-r from-orange-400 via-gray-300 to-indigo-400 text-transparent bg-clip-text">
                 Natalia
             </span>
 
