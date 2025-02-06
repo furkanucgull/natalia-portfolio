@@ -36,7 +36,7 @@ const Navbar = () => {
             >
                 <div className="flex flex-col sm:flex-row gap-10 sm:gap-4 w-full sm:w-auto text-right">
                     <ul>
-                        <a onClick={() => { navigate("/"); }}
+                        <a onClick={() => { navigate("/"); { toggleMenu(); } }}
                             className="hover:text-gray-300 font-poppins hover:bg-[#161A1A] transition duration-300 ease-in-out px-6 py-2 text-right text-sm sm:text-md md:px-8 md:py-3 text-orange-500 cursor-pointer">
                             Home
                         </a>
@@ -48,7 +48,7 @@ const Navbar = () => {
                         </a>
                     </ul>
                     <ul>
-                        <a onClick={() => { navigate("/contact"); }}
+                        <a onClick={() => { navigate("/contact"); toggleMenu(); }}
                             className="hover:text-gray-300 font-poppins hover:bg-[#161A1A] transition duration-300 ease-in-out px-6 py-2 text-right text-sm sm:text-md md:px-8 md:py-3 text-orange-500 cursor-pointer">
                             Contact
                         </a>
