@@ -13,7 +13,7 @@ const AboutSection = ({ scrollYProgress }: any) => {
         <div className="h-screen sticky top-0 ">
             <div className="name-section">
                 <HeroName />
-                <div className="h-screen grid sm:grid-cols-12 w-full">
+                <div className="h-screen grid sm:grid-cols-12 w-full ">
                     <div className="hero-pic md:col-span-5 p-10">
 
                         <motion.div style={{ opacity, y: translateY }} className="h-full">

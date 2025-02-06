@@ -6,10 +6,12 @@ const Footer = () => {
             <div className="container mx-auto flex flex-col items-center justify-between text-center lg:text-left lg:flex-row">
 
                 <div className="mb-4 lg:mb-0">
-                    <h1 className="text-sm md:text-lg font-semibold tracking-wide text-nowrap">
+                    <h1 className="text-sm md:text-lg font-semibold tracking-wide">
                         © 2025 Natalia Senyshch. All rights reserved.
                     </h1>
                 </div>
+
+
                 <Socials />
             </div>
         </footer>

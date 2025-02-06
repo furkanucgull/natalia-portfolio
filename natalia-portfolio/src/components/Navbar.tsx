@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-
+    const navigate = useNavigate();
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
@@ -31,8 +32,8 @@ const Navbar = () => {
                 <ul className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full sm:w-auto text-right">
                     <li>
                         <a
-                            href="#home"
-                            className="hover:text-gray-300 font-poppins hover:bg-[#161A1A] transition duration-300 ease-in-out px-6 py-2 text-right text-sm sm:text-md md:px-8 md:py-3 text-orange-500"
+                            onClick={() => navigate("/")}
+                            className="hover:text-gray-300 font-poppins hover:bg-[#161A1A] transition duration-300 ease-in-out px-6 py-2 text-right text-sm sm:text-md md:px-8 md:py-3 text-orange-500 cursor-pointer"
                         >
                             Home
                         </a>
@@ -40,15 +41,16 @@ const Navbar = () => {
                     <li>
                         <a
                             href="#projects"
-                            className="hover:text-gray-300 font-poppins hover:bg-[#161A1A] transition duration-300 ease-in-out px-6 py-2 text-right text-sm sm:text-md md:px-8 md:py-3 text-orange-500"
+                            className="hover:text-gray-300 font-poppins hover:bg-[#161A1A] transition duration-300 ease-in-out px-6 py-2 text-right text-sm sm:text-md md:px-8 md:py-3 text-orange-500 cursor-pointer"
                         >
                             My Art Gallery
                         </a>
                     </li>
                     <li>
-                        <a
-                            href="#contact"
-                            className="hover:text-gray-300 font-poppins hover:bg-[#161A1A] transition duration-300 ease-in-out px-6 py-2 text-right text-sm sm:text-md md:px-8 md:py-3 text-orange-500"
+
+                        <a onClick={() => navigate("/contact")}
+
+                            className="hover:text-gray-300 font-poppins hover:bg-[#161A1A] transition duration-300 ease-in-out px-6 py-2 text-right text-sm sm:text-md md:px-8 md:py-3 text-orange-500 cursor-pointer"
                         >
                             Contact
                         </a>

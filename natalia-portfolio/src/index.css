@@ -6,8 +6,20 @@
   --font-satisfy: Satisfy, sans-serif;
   --font-pinyon: Pinyon Script, sans-serif;
   --color-heroname: #0c0808;
+  --font-robox: 'RoxboroughCF-Regular', 'sans-serif';
+  --font-roboxthin: 'RoxboroughCF-Thin', 'sans-serif';
+  --font-glacial: 'GlacialIndifference-Regular', 'sans-serif';
 }
-
+@font-face {
+  font-family: RoxboroughCF-Regular;
+  src: url('/public/fonts/RoxboroughCF-Regular.otf');
+  font-family: GlacialIndifference-Regular;
+  src: url('/public/fonts/GlacialIndifference-Regular.otf');
+}
+@font-face {
+  font-family: RoxboroughCF-Thin;
+  src: url('/public/fonts/RoxboroughCF-Thin.otf');
+}
 ::-webkit-scrollbar {
   width: 12px;
 }

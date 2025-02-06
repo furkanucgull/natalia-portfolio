@@ -10,7 +10,7 @@ const AboutMe = () => {
                 duration: 0.4,
                 ease: "easeOut",
             }}
-            className="p-6 sm:p-8 lg:p-12  shadow-lg rounded-2xl max-w-3xl mx-auto">
+            className="p-6 sm:p-8 lg:p-12  shadow-lg rounded-2xl max-w-3xl mx-auto ">
 
             <h1
 

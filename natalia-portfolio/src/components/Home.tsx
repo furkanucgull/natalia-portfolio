@@ -1,9 +1,7 @@
 import { useRef } from "react";
 import AboutSection from "./AboutSection";
 import { useScroll, useTransform, motion } from "framer-motion";
-import Navbar from "./Navbar";
 import Slider from "./Slider";
-import Footer from "./Footer";
 
 const Home = () => {
 
@@ -17,9 +15,7 @@ const Home = () => {
     const showSlider = useTransform(scrollYProgress, [0.6, 0.9], [0, 1]);
     return (
         <>
-            <header>
-                <Navbar />
-            </header>
+
             <main ref={container} className="relative h-[200vh] ">
                 <div ref={aboutRef}>
                     <AboutSection scrollYProgress={scrollYProgress} />
@@ -28,7 +24,7 @@ const Home = () => {
                 <motion.div style={{ opacity: showSlider }}>
                     <Slider scrollYProgress={scrollYProgress} />
                 </motion.div>
-                <Footer />
+
                 <div >
                 </div>
             </main>
