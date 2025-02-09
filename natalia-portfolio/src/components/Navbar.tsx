@@ -28,15 +28,16 @@ const Navbar = () => {
 
             {/* Menü */}
             <motion.div
-
+                //onClick={() => setMenuOpen(false)}
                 initial={{ opacity: 0, height: 0 }}
                 animate={menuOpen ? { opacity: 1, height: "auto" } : { opacity: 1, height: 0 }}
                 transition={{ duration: 0.2, ease: "easeInOut" }}
                 className={`sm:flex ${menuOpen ? "flex" : "hidden"} flex-col sm:flex-row items-center gap-2 sm:gap-4 absolute sm:static top-16 right-0 sm:right-auto w-full sm:w-auto bg-gradient-to-r from-gray-800 via-gray-600 to-gray-900 sm:bg-transparent sm:z-auto z-20 p-4 sm:p-0 shadow-lg sm:shadow-none rounded-b-4xl`}
             >
                 <div className="flex flex-col sm:flex-row gap-10 sm:gap-4 w-full sm:w-auto text-right">
-                    <ul>
-                        <a onClick={() => { navigate("/"); { toggleMenu(); } }}
+
+                    <ul >
+                        <a onClick={() => { navigate("/"); setMenuOpen(false); }}
                             className="hover:text-gray-300 font-poppins hover:bg-[#161A1A] transition duration-300 ease-in-out px-6 py-2 text-right text-sm sm:text-md md:px-8 md:py-3 text-orange-500 cursor-pointer">
                             Home
                         </a>
@@ -48,14 +49,15 @@ const Navbar = () => {
                         </a>
                     </ul>
                     <ul>
-                        <a onClick={() => { navigate("/contact"); toggleMenu(); }}
+                        <a onClick={() => { navigate("/contact"); setMenuOpen(false); }}
                             className="hover:text-gray-300 font-poppins hover:bg-[#161A1A] transition duration-300 ease-in-out px-6 py-2 text-right text-sm sm:text-md md:px-8 md:py-3 text-orange-500 cursor-pointer">
                             Contact
                         </a>
                     </ul>
+
                 </div>
             </motion.div>
-        </nav>
+        </nav >
     );
 };
 

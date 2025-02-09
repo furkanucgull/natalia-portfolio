@@ -1,5 +1,5 @@
-import { FaFacebook, FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+//import { FaFacebook, FaLinkedin } from "react-icons/fa";
+//import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 
 const Socials = () => {
@@ -9,10 +9,12 @@ const Socials = () => {
                 ✨ Follow Me on Social Media! ✨
             </h1>
             <div className="flex justify-center items-center gap-6 lg:gap-10">
-                <FaInstagram className="w-7 h-7 text-gray-400 hover:text-pink-500 transition-all duration-300 transform hover:scale-110" />
-                <FaFacebook className="w-7 h-7 text-gray-400 hover:text-blue-500 transition-all duration-300 transform hover:scale-110" />
+                <a href="https://www.instagram.com/artworkshopsns/">
+                    <FaInstagram className="w-7 h-7 text-gray-400 hover:text-pink-500 transition-all duration-300 transform hover:scale-120" />
+                </a>
+                {/* <FaFacebook className="w-7 h-7 text-gray-400 hover:text-blue-500 transition-all duration-300 transform hover:scale-110" />
                 <FaLinkedin className="w-7 h-7 text-gray-400 hover:text-blue-600 transition-all duration-300 transform hover:scale-110" />
-                <FaXTwitter className="w-7 h-7 text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110" />
+                <FaXTwitter className="w-7 h-7 text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110" /> */}
             </div>
         </div>
     );
